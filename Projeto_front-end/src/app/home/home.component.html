@@ -1,0 +1,248 @@
+<div class="container">
+  <div class="col-12">
+
+
+    <ngb-carousel *ngIf="images" id="home" class="mt-5">
+
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper">
+          <a routerLink="/noticia">
+            <div class="opacity-75">
+              <img [src]="image.src" [alt]="image.alt" />
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-caption">
+          <b>
+            <h3 class="text-warning">{{image.titulo}}</h3>
+          </b>
+          <h4>{{image.subtitulo}}</h4>
+        </div>
+      </ng-template>
+
+    </ngb-carousel>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-10" *ngFor="let noticia of noticias1">
+      <div class="row">
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-10">
+          <div class="row">
+
+            <div class="col-4 text-center" *ngFor="let noticia of noticias.slice(0,9)">
+              <a routerLink="/noticia/{{noticia.pk_id}}"><img src="http://localhost:4200/{{noticia.imagem}}" class="img-fluid" style="height: 175px; width: 100%"></a>
+              <h4 class="fw-normal"> {{noticia.titulo}} </h4>
+              <p><a routerLink="/noticia/{{noticia.pk_id}}" class="link-secondary">{{noticia.sub_titulo}}</a></p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <div class="col-2">
+
+          <div>
+            <h4 class="fst-italic">Posts Recentes</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                  href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                  </svg>
+                  <a routerLink="/noticia"><img src="/assets/Imagem/velha.jpg"></a>
+                  <div class="col-lg-8">
+                    <a routerLink="/noticia" class="link-secondary">
+                      <h6 class="mb-0">Gold Gair</h6>
+                    </a>
+                    <a routerLink="/noticia" class="link-secondary"><small class="text-body-secondary">Quem foi Golda
+                        Meir, 'Dama de Ferro' de Israel, que agora ganha novo filme</small></a>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                  href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                  </svg>
+                  <a routerLink="/noticia" class="link-secondary"> <img src="/assets/Imagem/123milhas.jpg"></a>
+                  <div class="col-lg-8">
+                    <a routerLink="/noticia" class="link-secondary">
+                      <h6 class="mb-0">123 Milhas</h6>
+                    </a>
+                    <a routerLink="/noticia" class="link-secondary"><small class="text-body-secondary">Justiça manda
+                        123milhas emitir passagens ou reembolsar clientes</small></a>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                  href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                  </svg>
+                  <a routerLink="/noticia" class="link-secondary"><img src="/assets/Imagem/comidape.jpg"></a>
+                  <div class="col-lg-8">
+                    <a routerLink="/noticia" class="link-secondary">
+                      <h6 class="mb-0">Croissant Roll</h6>
+                    </a>
+                    <a routerLink="/noticia" class="link-secondary"><small class="text-body-secondary">Conheça o
+                        supreme, croissant roll de NY que é sucesso no TikTok, e saiba onde comer em SP</small></a>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"><a routerLink="/esporte">Esporte</a></strong>
+              <h3 class="mb-0">Postagem em destaque</h3>
+              <div class="mb-1 text-body-secondary">Out 14</div>
+              <p class="card-text mb-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+              <strong class="d-inline-block mb-2 text-primary-emphasis"><a routerLink="/noticia">Continuar
+                  Lendo</a></strong>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <a routerLink="/noticia"><img class="bd-placeholder-img" width="200" height="250"
+                  src="/assets/Imagem/comida.jpg"></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"><a
+                  routerLink="/automoveis">Automoveis</a></strong>
+              <h3 class="mb-0">Postagem em destaque</h3>
+              <div class="mb-1 text-body-secondary">Out 13</div>
+              <p class="card-text mb-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+              <strong class="d-inline-block mb-2 text-primary-emphasis"><a routerLink="/noticia">Continuar
+                  Lendo</a></strong>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <a routerLink="/noticia"><img class="bd-placeholder-img" width="200" height="250"
+                  src="/assets/Imagem/comida.jpg"></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <h2><a routerLink="/esporte" class="link-dark">esporte</a></h2>
+                <div class="col-3 text-center">
+
+
+                  <a routerLink="/noticia"><img src="/assets/Imagem/123.jpg" class="img-fluid"></a>
+
+                  <h4 class="fw-normal"> 123 Milhas</h4>
+
+                  <p><a routerLink="/noticia" class="link-secondary">Justiça manda 123milhas emitir passagens ou
+                      reembolsar clientes</a></p>
+
+
+                </div>
+                <div class="col-3 text-center">
+
+                  <a routerLink="/noticia"><img src="/assets/Imagem/indio.jpg" class="img-fluid"></a>
+
+                  <h4 class="fw-normal"> Indígena Dionísia</h4>
+
+                  <p><a href="noticia" class="link-secondary">Grupo de Indígenas iniciaram lutas pela independência no
+                      Ceará</a></p>
+
+
+                </div>
+                <div class="col-6 text-center">
+
+                  <a routerLink="/noticia"><img src="/assets/Imagem/comida.jpg" class="img-fluid"></a>
+
+                  <h4 class="fw-normal"> Gastronomia de Taiwan</h4>
+
+                  <p><a href="noticia" class="link-secondary">Conhece a gastronomia de Taiwan? Aiô é novo restaurante na
+                      Vila Mariana</a></p>
+
+
+                </div>
+
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="row">
+                        <h2><a routerLink="/esporte" class="link-dark ">cotidiano</a></h2>
+                        <div class="col-4 text-center">
+
+
+                          <a routerLink="/noticia"><img src="/assets/Imagem/123.jpg" class="img-fluid"></a>
+
+                          <h4 class="fw-normal"> 123 Milhas</h4>
+
+                          <p><a routerLink="/noticia" class="link-secondary">Justiça manda 123milhas emitir passagens ou
+                              reembolsar clientes</a></p>
+
+
+                        </div>
+                        <div class="col-4 text-center">
+
+                          <a routerLink="/noticia"><img src="/assets/Imagem/indio.jpg" class="img-fluid"></a>
+
+                          <h4 class="fw-normal"> Indígena Dionísia</h4>
+
+                          <p><a href="noticia" class="link-secondary">Grupo de Indígenas iniciaram lutas pela
+                              independência no Ceará</a></p>
+
+
+                        </div>
+                        <div class="col-4 text-center">
+
+                          <a routerLink="/noticia"><img src="/assets/Imagem/comida.jpg" class="img-fluid"></a>
+
+                          <h4 class="fw-normal"> Gastronomia de Taiwan</h4>
+
+                          <p><a href="noticia" class="link-secondary">Conhece a gastronomia de Taiwan? Aiô é novo
+                              restaurante na Vila Mariana</a></p>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

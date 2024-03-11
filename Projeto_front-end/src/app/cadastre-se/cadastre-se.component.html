@@ -1,0 +1,53 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div class="container mt-5">
+      <div class="row mt-5 justify-content-center">
+          <div class="col-4">
+              <div class="row">
+                  <div class="col text-center mt-5">
+                      <h2>Cadastre-se</h2>
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col">
+                      <label>Nome: <span class="text-danger">*</span></label>
+                      <input class="form-control" formControlName="nome">
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col">
+                      <label>CPF: <span class="text-danger">*</span></label>
+                      <input class="form-control" formControlName="cpf">
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col">
+                      <label>E-mail: <span class="text-danger">*</span></label>
+                      <input class="form-control" formControlName="email">
+                  </div>
+  
+              </div>
+              <div class="row mb-3">
+                  <div class="col">
+                      <label>Whatsapp: <span class="text-danger">*</span></label>
+                      <input class="form-control" formControlName="whatsapp">
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col">
+                      <label>Senha: <span class="text-danger">*</span></label>
+                      <input type="password" class="form-control" formControlName="senha">
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col">
+                      <!-- {{ formulario.value | json}} -->
+                      <button class="btn btn-outline-danger me-3" type="reset">Limpar</button>
+                      <button [disabled]="!formulario.valid" class="btn btn-primary" type="submit">Cadastrar</button>
+                  </div>
+              </div>
+          </div>
+  
+      </div>
+  
+  </div>
+  </form>
